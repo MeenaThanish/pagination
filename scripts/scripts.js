@@ -127,3 +127,7 @@ async function loadPage() {
 }
 
 loadPage();
+document.querySelectorAll('[data-id]').forEach(el => {
+  el.setAttribute('id', el.getAttribute('data-id'));
+  el.removeAttribute('data-id');
+});
